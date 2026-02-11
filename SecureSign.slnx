@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="KI.WinForms/KI.WinForms.csproj" />
+  <Project Path="PKI.Core/PKI.Core.csproj" />
+  <Project Path="Signing.Core/Signing.Core.csproj" />
+</Solution>

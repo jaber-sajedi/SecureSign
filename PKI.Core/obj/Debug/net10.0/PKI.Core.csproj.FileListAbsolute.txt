@@ -1,0 +1,5 @@
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.csproj.AssemblyReference.cache
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.AssemblyInfoInputs.cache
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.AssemblyInfo.cs
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.csproj.CoreCompileInputs.cache
