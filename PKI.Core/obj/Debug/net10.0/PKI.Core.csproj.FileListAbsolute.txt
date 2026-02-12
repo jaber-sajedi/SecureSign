@@ -3,3 +3,11 @@ D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.GeneratedMSBuildEditorConfig.e
 D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.AssemblyInfoInputs.cache
 D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.AssemblyInfo.cs
 D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.csproj.CoreCompileInputs.cache
+D:\SecureSign\PKI.Core\bin\Debug\net10.0\PKI.Core.deps.json
+D:\SecureSign\PKI.Core\bin\Debug\net10.0\PKI.Core.dll
+D:\SecureSign\PKI.Core\bin\Debug\net10.0\PKI.Core.pdb
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.sourcelink.json
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.dll
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\refint\PKI.Core.dll
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\PKI.Core.pdb
+D:\SecureSign\PKI.Core\obj\Debug\net10.0\ref\PKI.Core.dll

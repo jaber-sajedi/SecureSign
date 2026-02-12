@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PKI.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ba240ee62e098ff0682de38ac753455a58440ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("PKI.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PKI.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

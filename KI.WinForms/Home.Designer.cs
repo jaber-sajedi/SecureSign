@@ -28,12 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Home";
+            menuStrip1 = new MenuStrip();
+            rootToolStripMenuItem = new ToolStripMenuItem();
+            rootCAToolStripMenuItem = new ToolStripMenuItem();
+            intermediateCAToolStripMenuItem = new ToolStripMenuItem();
+            generateEndEntityToolStripMenuItem = new ToolStripMenuItem();
+            signFileToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { rootToolStripMenuItem, generateEndEntityToolStripMenuItem, signFileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // rootToolStripMenuItem
+            // 
+            rootToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rootCAToolStripMenuItem, intermediateCAToolStripMenuItem });
+            rootToolStripMenuItem.Name = "rootToolStripMenuItem";
+            rootToolStripMenuItem.Size = new Size(42, 24);
+            rootToolStripMenuItem.Text = "CA";
+            rootToolStripMenuItem.Click += rootToolStripMenuItem_Click;
+            // 
+            // rootCAToolStripMenuItem
+            // 
+            rootCAToolStripMenuItem.Name = "rootCAToolStripMenuItem";
+            rootCAToolStripMenuItem.Size = new Size(202, 26);
+            rootCAToolStripMenuItem.Text = "Root-CA";
+            rootCAToolStripMenuItem.Click += rootCAToolStripMenuItem_Click;
+            // 
+            // intermediateCAToolStripMenuItem
+            // 
+            intermediateCAToolStripMenuItem.Name = "intermediateCAToolStripMenuItem";
+            intermediateCAToolStripMenuItem.Size = new Size(202, 26);
+            intermediateCAToolStripMenuItem.Text = "Intermediate-CA";
+            intermediateCAToolStripMenuItem.Click += intermediateCAToolStripMenuItem_Click;
+            // 
+            // generateEndEntityToolStripMenuItem
+            // 
+            generateEndEntityToolStripMenuItem.Name = "generateEndEntityToolStripMenuItem";
+            generateEndEntityToolStripMenuItem.Size = new Size(145, 24);
+            generateEndEntityToolStripMenuItem.Text = "GenerateEndEntity";
+            generateEndEntityToolStripMenuItem.Click += generateEndEntityToolStripMenuItem_Click;
+            // 
+            // signFileToolStripMenuItem
+            // 
+            signFileToolStripMenuItem.Name = "signFileToolStripMenuItem";
+            signFileToolStripMenuItem.Size = new Size(75, 24);
+            signFileToolStripMenuItem.Text = "SignFile";
+            signFileToolStripMenuItem.Click += signFileToolStripMenuItem_Click;
+            // 
+            // Home
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            Name = "Home";
+            Text = "Home";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem rootToolStripMenuItem;
+        private ToolStripMenuItem rootCAToolStripMenuItem;
+        private ToolStripMenuItem intermediateCAToolStripMenuItem;
+        private ToolStripMenuItem generateEndEntityToolStripMenuItem;
+        private ToolStripMenuItem signFileToolStripMenuItem;
     }
 }
