@@ -193,6 +193,7 @@
             Controls.Add(CommonName);
             Controls.Add(btnGenerateIntermediate);
             Name = "IntermediateCAfrm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IntermediateCAfrm";
             ResumeLayout(false);
             PerformLayout();

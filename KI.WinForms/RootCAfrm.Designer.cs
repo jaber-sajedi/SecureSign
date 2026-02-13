@@ -42,7 +42,7 @@
             // 
             // btnCreateRootCertificate
             // 
-            btnCreateRootCertificate.Location = new Point(89, 197);
+            btnCreateRootCertificate.Location = new Point(85, 163);
             btnCreateRootCertificate.Name = "btnCreateRootCertificate";
             btnCreateRootCertificate.Size = new Size(268, 57);
             btnCreateRootCertificate.TabIndex = 1;
@@ -53,7 +53,7 @@
             // CommonName
             // 
             CommonName.AutoSize = true;
-            CommonName.Location = new Point(22, 46);
+            CommonName.Location = new Point(18, 12);
             CommonName.Name = "CommonName";
             CommonName.Size = new Size(117, 20);
             CommonName.TabIndex = 2;
@@ -61,7 +61,7 @@
             // 
             // txtCommonName
             // 
-            txtCommonName.Location = new Point(160, 46);
+            txtCommonName.Location = new Point(156, 12);
             txtCommonName.Name = "txtCommonName";
             txtCommonName.Size = new Size(240, 27);
             txtCommonName.TabIndex = 3;
@@ -69,7 +69,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(89, 118);
+            label1.Location = new Point(85, 84);
             label1.Name = "label1";
             label1.Size = new Size(50, 20);
             label1.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // txtRootYears
             // 
-            txtRootYears.Location = new Point(160, 118);
+            txtRootYears.Location = new Point(156, 84);
             txtRootYears.Name = "txtRootYears";
             txtRootYears.Size = new Size(240, 27);
             txtRootYears.TabIndex = 3;
@@ -85,7 +85,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 157);
+            label2.Location = new Point(8, 123);
             label2.Name = "label2";
             label2.Size = new Size(127, 20);
             label2.TabIndex = 2;
@@ -94,14 +94,14 @@
             // cmbRootAlgorithm
             // 
             cmbRootAlgorithm.FormattingEnabled = true;
-            cmbRootAlgorithm.Location = new Point(160, 154);
+            cmbRootAlgorithm.Location = new Point(156, 120);
             cmbRootAlgorithm.Name = "cmbRootAlgorithm";
             cmbRootAlgorithm.Size = new Size(240, 28);
             cmbRootAlgorithm.TabIndex = 4;
             // 
             // btnExportRoot
             // 
-            btnExportRoot.Location = new Point(89, 271);
+            btnExportRoot.Location = new Point(85, 237);
             btnExportRoot.Name = "btnExportRoot";
             btnExportRoot.Size = new Size(268, 59);
             btnExportRoot.TabIndex = 5;
@@ -112,7 +112,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(22, 79);
+            label3.Location = new Point(18, 45);
             label3.Name = "label3";
             label3.Size = new Size(113, 20);
             label3.TabIndex = 2;
@@ -120,16 +120,16 @@
             // 
             // txtRootPassword
             // 
-            txtRootPassword.Location = new Point(160, 79);
+            txtRootPassword.Location = new Point(156, 45);
             txtRootPassword.Name = "txtRootPassword";
             txtRootPassword.Size = new Size(240, 27);
             txtRootPassword.TabIndex = 3;
             // 
-            // RootCA
+            // RootCAfrm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(475, 418);
+            ClientSize = new Size(442, 356);
             Controls.Add(btnExportRoot);
             Controls.Add(cmbRootAlgorithm);
             Controls.Add(txtRootYears);
@@ -140,7 +140,8 @@
             Controls.Add(label1);
             Controls.Add(CommonName);
             Controls.Add(btnCreateRootCertificate);
-            Name = "RootCA";
+            Name = "RootCAfrm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RootCA";
             Load += RootCA_Load;
             ResumeLayout(false);

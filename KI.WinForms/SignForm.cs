@@ -33,11 +33,12 @@ namespace KI.WinForms
 
             using (var dlg = new OpenFileDialog())
             {
+                dlg.Filter = "*.key|*.key";
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
 
                     selectedFile = dlg.FileName;
-
+                    lblFileStatus.Text = selectedFile;
                     MessageBox.Show($"Key selected: {Path.GetFileName(selectedFile)}");
                 }
             }
@@ -64,7 +65,7 @@ namespace KI.WinForms
 
             var fileSigner = new FileSigner(signer);
             fileSigner.SignFile(selectedFileForSign, privateKey, cert, cmbRootAlgorithm.SelectedItem.ToString());
-
+            lblSignFile.Text = selectedFileForSign;
             MessageBox.Show("File signed successfully!");
         }
 
@@ -88,7 +89,7 @@ namespace KI.WinForms
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
                     selectedFileForSign = dlg.FileName;
-                    lblFileForSignStatus.Text = $"File: {Path.GetFileName(selectedFileForSign)}";
+                    lblFileForSignStatus.Text = selectedFileForSign;
                     MessageBox.Show($"File: {Path.GetFileName(selectedFileForSign)}");
                 }
             }
@@ -100,7 +101,7 @@ namespace KI.WinForms
             using (var dlg = new OpenFileDialog())
             {
                 dlg.Title = "Select Certificate";
-                dlg.Filter = "PEM Certificate (*.pem)|*.pem|All Files (*.*)|*.*";
+                dlg.Filter = "PEM Certificate (*.pem)|*.pem";
 
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {

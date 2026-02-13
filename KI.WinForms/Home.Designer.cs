@@ -34,13 +34,14 @@
             intermediateCAToolStripMenuItem = new ToolStripMenuItem();
             generateEndEntityToolStripMenuItem = new ToolStripMenuItem();
             signFileToolStripMenuItem = new ToolStripMenuItem();
+            verifyToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { rootToolStripMenuItem, generateEndEntityToolStripMenuItem, signFileToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { rootToolStripMenuItem, generateEndEntityToolStripMenuItem, signFileToolStripMenuItem, verifyToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -83,6 +84,13 @@
             signFileToolStripMenuItem.Text = "SignFile";
             signFileToolStripMenuItem.Click += signFileToolStripMenuItem_Click;
             // 
+            // verifyToolStripMenuItem
+            // 
+            verifyToolStripMenuItem.Name = "verifyToolStripMenuItem";
+            verifyToolStripMenuItem.Size = new Size(60, 24);
+            verifyToolStripMenuItem.Text = "Verify";
+            verifyToolStripMenuItem.Click += verifyToolStripMenuItem_Click;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -91,6 +99,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Home";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Home";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -106,5 +115,6 @@
         private ToolStripMenuItem intermediateCAToolStripMenuItem;
         private ToolStripMenuItem generateEndEntityToolStripMenuItem;
         private ToolStripMenuItem signFileToolStripMenuItem;
+        private ToolStripMenuItem verifyToolStripMenuItem;
     }
 }

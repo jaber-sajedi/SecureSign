@@ -173,6 +173,7 @@
             Controls.Add(CommonName);
             Controls.Add(btnGenerateEndEntity);
             Name = "GenerateEndfrm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "GenerateEndfrm";
             ResumeLayout(false);
             PerformLayout();

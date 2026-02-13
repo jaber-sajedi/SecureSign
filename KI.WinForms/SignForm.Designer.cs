@@ -30,7 +30,7 @@
         {
             btnSelectFile = new Button();
             lblFileStatus = new Label();
-            label1 = new Label();
+            lblSignFile = new Label();
             btnSignFile = new Button();
             cmbRootAlgorithm = new ComboBox();
             label2 = new Label();
@@ -53,24 +53,24 @@
             // lblFileStatus
             // 
             lblFileStatus.AutoSize = true;
-            lblFileStatus.Location = new Point(136, 27);
+            lblFileStatus.Location = new Point(139, 27);
             lblFileStatus.Name = "lblFileStatus";
             lblFileStatus.Size = new Size(50, 20);
             lblFileStatus.TabIndex = 1;
             lblFileStatus.Text = "label1";
             // 
-            // label1
+            // lblSignFile
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(136, 132);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            lblSignFile.AutoSize = true;
+            lblSignFile.Location = new Point(130, 186);
+            lblSignFile.Name = "lblSignFile";
+            lblSignFile.Size = new Size(50, 20);
+            lblSignFile.TabIndex = 1;
+            lblSignFile.Text = "label1";
             // 
             // btnSignFile
             // 
-            btnSignFile.Location = new Point(12, 125);
+            btnSignFile.Location = new Point(3, 179);
             btnSignFile.Name = "btnSignFile";
             btnSignFile.Size = new Size(118, 29);
             btnSignFile.TabIndex = 2;
@@ -81,7 +81,7 @@
             // cmbRootAlgorithm
             // 
             cmbRootAlgorithm.FormattingEnabled = true;
-            cmbRootAlgorithm.Location = new Point(136, 170);
+            cmbRootAlgorithm.Location = new Point(136, 138);
             cmbRootAlgorithm.Name = "cmbRootAlgorithm";
             cmbRootAlgorithm.Size = new Size(250, 28);
             cmbRootAlgorithm.TabIndex = 6;
@@ -89,7 +89,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(3, 170);
+            label2.Location = new Point(3, 138);
             label2.Name = "label2";
             label2.Size = new Size(127, 20);
             label2.TabIndex = 5;
@@ -137,7 +137,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(516, 383);
+            ClientSize = new Size(431, 383);
             Controls.Add(lblCertStatus);
             Controls.Add(btnSelectCert);
             Controls.Add(lblFileForSignStatus);
@@ -145,10 +145,11 @@
             Controls.Add(cmbRootAlgorithm);
             Controls.Add(label2);
             Controls.Add(btnSignFile);
-            Controls.Add(label1);
+            Controls.Add(lblSignFile);
             Controls.Add(lblFileStatus);
             Controls.Add(btnSelectFile);
             Name = "SignForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SignForm";
             Load += SignForm_Load;
             ResumeLayout(false);
@@ -160,7 +161,7 @@
         private Button btnSelectFile;
         private Label lblFileStatus;
  
-        private Label label1;
+        private Label lblSignFile;
         private Button btnSignFile;
         private ComboBox cmbRootAlgorithm;
         private Label label2;

@@ -43,5 +43,11 @@ namespace KI.WinForms
             SignForm afrm = new SignForm();
             afrm.ShowDialog();
         }
+
+        private void verifyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerifyForm afrm = new VerifyForm();
+            afrm.ShowDialog();
+        }
     }
 }
