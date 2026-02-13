@@ -17,7 +17,9 @@ namespace KI.WinForms
     {
         byte[] fileBytes;
         string selectedFile;
-          string privateKeyFile;
+        string selectedFileForSign;
+        AsymmetricKeyParameter privateKeyFile;
+        string certificateFile;
         public SignForm()
         {
             InitializeComponent();
@@ -33,33 +35,35 @@ namespace KI.WinForms
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    privateKeyFile = dlg.FileName;
-                    selectedFile= dlg.FileName;
-                     MessageBox.Show($"Key selected: {Path.GetFileName(privateKeyFile)}");
+
+                    selectedFile = dlg.FileName;
+
+                    MessageBox.Show($"Key selected: {Path.GetFileName(selectedFile)}");
                 }
             }
 
-           
+
         }
 
 
 
         private void btnSignFile_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(selectedFile) || string.IsNullOrEmpty(privateKeyFile))
+            var privateKey = LoadKey.LoadPrivateKey(selectedFile);
+
+            if (string.IsNullOrEmpty(selectedFile) || privateKey.IsPrivate != true)
             {
                 MessageBox.Show("ابتدا فایل و کلید خصوصی را انتخاب کنید!");
                 return;
             }
 
-            var privateKey = LoadKey.LoadPrivateKey(privateKeyFile);
 
             ISignatureProvider signer = CryptoFactory.CreateSigner(cmbRootAlgorithm.SelectedItem.ToString());
 
-            var cert = LoadKey.LoadCertificate("endentity.pem"); // اگر certificate میخوای داخل JSON باشه
+            var cert = LoadKey.LoadCertificate(certificateFile);  
 
             var fileSigner = new FileSigner(signer);
-            fileSigner.SignFile(selectedFile, privateKey, cert, cmbRootAlgorithm.SelectedItem.ToString());
+            fileSigner.SignFile(selectedFileForSign, privateKey, cert, cmbRootAlgorithm.SelectedItem.ToString());
 
             MessageBox.Show("File signed successfully!");
         }
@@ -67,6 +71,44 @@ namespace KI.WinForms
         private void SignForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSelectPrivateKeyFile(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSelectFileForSign_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Select file to sign";
+                dlg.Filter = "All Files (*.*)|*.*";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    selectedFileForSign = dlg.FileName;
+                    lblFileForSignStatus.Text = $"File: {Path.GetFileName(selectedFileForSign)}";
+                    MessageBox.Show($"File: {Path.GetFileName(selectedFileForSign)}");
+                }
+            }
+
+        }
+
+        private void btnSelectCert_Click(object sender, EventArgs e)
+        {
+            using (var dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Select Certificate";
+                dlg.Filter = "PEM Certificate (*.pem)|*.pem|All Files (*.*)|*.*";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    certificateFile = dlg.FileName;
+                    lblCertStatus.Text = $"Cert: {Path.GetFileName(certificateFile)}";
+                    MessageBox.Show($"Cert: {Path.GetFileName(certificateFile)}");
+                }
+            }
         }
     }
 }
